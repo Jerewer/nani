@@ -125,14 +125,14 @@ def main():
     gestor = Notificador()
 
     # Crear usuarios con diferentes preferencias
-    ana = Usuario("itzel", "ana@example.com", "+5215512345678", ["email"], factory)
+    itzel = Usuario("itzel", "ana@example.com", "+5215512345678", ["email"], factory)
     luis = Usuario("Luis", "luis@example.com", "+5215587654321", ["sms", "push"], factory)
-    carla = Usuario("Lupito", "carla@example.com", "+5215591122334", ["push", "email"], factory)
+    Lupito = Usuario("Lupito", "carla@example.com", "+5215591122334", ["push", "email"], factory)
 
     # Suscribir usuarios
-    ana.suscribirse(gestor)
+    itzel.suscribirse(gestor)
     luis.suscribirse(gestor)
-    gestor.agregar_observador(carla)  # se puede hacer desde gestor o desde usuario
+    gestor.agregar_observador(Lupito)  # se puede hacer desde gestor o desde usuario
 
     # Enviar una notificación
     gestor.notificar_observadores("Nueva actualización disponible: versión 1.2.0")
